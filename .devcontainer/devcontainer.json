@@ -3,9 +3,9 @@
   "dockerFile": "../Dockerfile",
   "context": "..",
   "remoteUser": "node",
-  "forwardPorts": [
-    "3000:3000"
-  ],
+  "forwardPorts": [3000],
+  "appPort": [3000],
+  "initializeCommand": "docker-compose up --build",
   "mounts": [
     "source=/Users/lucascorrea/keypro,target=/workspace,type=bind"
   ]
