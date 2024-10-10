@@ -1,0 +1,12 @@
+{
+  "name": "keypro",
+  "dockerFile": "../Dockerfile",
+  "context": "..",
+  "remoteUser": "node",
+  "forwardPorts": [
+    "3000:3000"
+  ],
+  "mounts": [
+    "source=/Users/lucascorrea/keypro,target=/workspace,type=bind"
+  ]
+}
