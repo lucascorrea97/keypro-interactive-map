@@ -1,46 +1,126 @@
-# Getting Started with Create React App
+# **Keypro Interactive Map**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the **Keypro Interactive Map** project. This project is built using **React** version `18`, and follows best practices for structuring the codebase into reusable modules.
 
-## Available Scripts
+## **Table of Contents**
 
-In the project directory, you can run:
+- [Project Overview](#project-overview)
+- [Installation & Setup](#installation--setup)
+- [Folder Structure](#folder-structure)
+  - [Fixtures](#fixtures)
+  - [Design System](#design-system)
+  - [Features](#features)
+  - [Navigators](#navigators)
+  - [Screens](#screens)
 
-### `npm start`
+## **Project Overview**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The **Keypro Interactive Map** is a modern web app built using React. It is designed with scalability and maintainability in mind, utilizing a modular structure to ensure easy integration of new features, a consistent design system, and a seamless user experience across different screens.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## **Installation & Setup**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started with the project, follow these steps:
 
-### `npm run build`
+### **Prerequisites**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Docker** (Ensure Docker is installed and running)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Step-by-Step Guide**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
 
-### `npm run eject`
+```bash
+   git clone https://github.com/lucascorrea97/keypro-interactive-map.git
+   cd keypro-interactive-map
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. **Start the application with Docker:**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+   docker-compose up --build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## **How to Use the Application**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Follow these steps to effectively navigate and utilize the main features of the **Keypro Interactive Map**:
 
-## Learn More
+### Step 1: Register a New Account
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Open the application in your browser.
+2. Fill out the sign-up form with your details:
+   - **Email**
+   - **Password**
+   - **Confirm Password**
+3. Submit the form to create your new account.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Step 2: Sign In
+
+1. Enter your registered **Email** and **Password**.
+2. Click the **Sign In** button to access the application using your account.
+
+### Step 3: Create a New Point of Interest (POI)
+
+1. Once signed in, locate the **"+" button** on the bottom left corner of the screen.
+2. Click the **"+" button**.
+3. Click anywhere on the map where you want to create a marker for your Point of Interest.
+4. A marker will be placed at that location.
+
+### Step 4: View and Edit the POI
+
+1. To view or edit an existing Point of Interest, simply click on the marker you previously created on the map.
+2. An edit form will appear with the details of the POI.
+3. Fill out the necessary fields in the edit form.
+4. Click the **"Save"** button to update the Point of Interest with the new details.
+
+---
+
+By following these steps, you can easily register, sign in, create, and manage Points of Interest within the **Keypro Interactive Map**.
+
+## **Folder Structure**
+
+The project is structured into several key directories, each serving a unique purpose in organizing the codebase.
+
+### **Design System**
+
+The `designSystem` folder holds all the reusable styles, components, and themes that help maintain a consistent design across the app. This includes colors, typography, button styles, and other UI elements that follow the app’s design guidelines.
+
+- **Key components include:**
+  - **Button:** Buttons with different variants
+  - **Colors:** Theme and color palette
+  - **Spacing & Layout:** Consistent margin, padding, and layout configurations
+
+### **Features**
+
+The `features` folder houses the primary functionalities or feature sets of the application. Each feature is typically modularized into its own subfolder, which includes its own logic, services, and components.
+
+- **Authentication:** Handles user authentication and management
+- **Interactive Map:** Provides a user interface for map interactions and displays geolocation data
+
+#### **Pages**
+
+The `pages` folders holds the individual pages components for the feature. Each pages represents a distinct view or page in the app and is connected to a specific feature.
+
+- **Examples of pages:**
+
+  - **authentication:** The main authentication page
+  - **interactive-map:** The main page for the interactive-map
+
+  #### **Containers**
+
+The `containers` folders holds the components used in the pages for each feature.
+
+#### **Services**
+
+The `services` folders is where all the queries, mutations, contexts and types are located for each feature.
+
+### **Future improvements:**
+
+To further improve the project I would focus on the following areas:
+
+- **End-to-End (E2E) Testing:** Currently, we utilize unit tests with mocked data, which does not provide the required confidence in the tests. We should implement E2E tests for the interactive map to ensure comprehensive coverage and reliable functionality.
+
+- **Custom Components:** Transitioning from Chakra UI components to custom-built components will allow us to leverage design system tokens more effectively, providing a tailored experience for our users.
+
+- **GitHub Codespaces:** Finishing the Github Codespaces setup. I have tried setting it up, however, I cannot verify if the setup is working properly due to firewall restrictions. My work laptop is from my current employer and I cannot turn that off.
