@@ -66,6 +66,7 @@ const InteractiveMap = ({ authenticatedUser }: InteractiveMapsProps) => {
     mapInitialized.current = true;
 
     const map = new Map({
+      // eslint-disable-next-line
       target: mapRef.current!,
       layers: [
         new TileLayer({
@@ -89,6 +90,7 @@ const InteractiveMap = ({ authenticatedUser }: InteractiveMapsProps) => {
     setMarkerLayer(vectorLayer);
   }, []);
 
+  // eslint-disable-next-line
   const handleOnMapClick = async (event: MapBrowserEvent<any>) => {
     setIsAddPinEnabled(false);
     const coordinates = event.coordinate;
@@ -121,6 +123,7 @@ const InteractiveMap = ({ authenticatedUser }: InteractiveMapsProps) => {
     );
 
     // Add the point of interest to the marker layer
+    // eslint-disable-next-line
     markerLayer!.getSource()?.addFeature(pointOfInterest);
 
     await createPointOfInterest(pointOfInterestData);
@@ -128,6 +131,7 @@ const InteractiveMap = ({ authenticatedUser }: InteractiveMapsProps) => {
 
   const setupPointsOfInterest = (
     pointsOfInterestToSet: PointOfInterest[],
+    // eslint-disable-next-line
     markerLayer: VectorLayer<VectorSource<any>, any> | null
   ) => {
     if (!isMapSetup) {
@@ -158,6 +162,7 @@ const InteractiveMap = ({ authenticatedUser }: InteractiveMapsProps) => {
         );
 
         // Add the point of interest to the marker layer
+        // eslint-disable-next-line
         markerLayer!.getSource()?.addFeature(newPointOfInterest);
       });
       setIsMapSetup(true);
