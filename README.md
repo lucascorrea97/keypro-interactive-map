@@ -6,12 +6,13 @@ Welcome to the **Keypro Interactive Map** project. This project is built using *
 
 - [Project Overview](#project-overview)
 - [Installation & Setup](#installation--setup)
+- [How to use the application](#how-to-use-the-application)
 - [Folder Structure](#folder-structure)
-  - [Fixtures](#fixtures)
   - [Design System](#design-system)
   - [Features](#features)
-  - [Navigators](#navigators)
-  - [Screens](#screens)
+  - [Pages](#pages)
+  - [Services](#services)
+- [Future Improvements](#future-improvements)
 
 ## **Project Overview**
 
